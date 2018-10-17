@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Teham Editions 1.8</string>
+
+    <string name="nav_roman">Roman</string>
+    <string name="nav_essai">Essai</string>
+    <string name="nav_theatre">Theatre</string>
+    <string name="nav_conte">Conte</string>
+
+
+    <string name="roman_title">Roman Title</string>
+    <string name="auteur_name">Auteur</string>
+    <string name="editeur_name">Editeur</string>
+    <string name="mention">Mentions</string>
+    <string name="details">Details</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

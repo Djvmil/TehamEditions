@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="100dp"
+xmlns:cardview="http://schemas.android.com/apk/res-auto"
+android:layout_margin="2dp"
+cardview:cardCornerRadius="10dp">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+
+    <ImageView
+        android:id="@+id/img_book_id"
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:background="@color/colorPrimary"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_book_id"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:gravity="left"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/roman_title"/>
+
+        <TextView
+            android:id="@+id/auteur_book_id"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:gravity="left"
+            android:textSize="18sp"
+            android:textColor="@color/colorNoir"
+            android:text="@string/auteur_name"/>
+        <TextView
+            android:id="@+id/editeur_book_id"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:gravity="left"
+            android:textSize="18sp"
+            android:textColor="@color/colorGray"
+            android:text="@string/editeur_name"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:background="@drawable/ic_favorite_border_black_24dp"/>
+            <TextView
+                android:id="@+id/nb_book_id"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:textSize="15sp"
+                android:textColor="@color/colorNoir"
+                android:text="0"/>
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:textSize="15sp"
+                android:textColor="@color/colorNoir"
+                android:text="@string/mention"/>
+            <TextView
+                android:id="@+id/detail_book_id"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/details"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</android.support.v7.widget.CardView>
