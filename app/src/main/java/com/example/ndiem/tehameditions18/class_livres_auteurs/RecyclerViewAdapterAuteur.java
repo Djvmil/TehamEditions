@@ -1,4 +1,4 @@
-package com.example.ndiem.tehameditions18;
+package com.example.ndiem.tehameditions18.class_livres_auteurs;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.ndiem.tehameditions18.R;
 
 import java.util.List;
 

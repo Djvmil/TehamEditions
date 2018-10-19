@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
-    tools:context=".TheatreActivity">
+    tools:context=".theatre.TheatreActivity">
 
 
     <RelativeLayout
@@ -24,6 +24,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabs_theatre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_gray_border_botom" />
+
             </android.support.design.widget.AppBarLayout>
 
 
@@ -37,14 +43,11 @@
             android:layout_above="@id/rel_bottom"
             android:layout_below="@+id/rel_top">
 
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="wrap_content"
+            <android.support.v4.view.ViewPager
+                android:id="@+id/container_view_theatre"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:textSize="25sp"
-                android:text="Activity Theatre"
-                android:layout_marginTop="40dp"/>
+                android:background="@drawable/white_gray_border_botom" />
 
         </RelativeLayout>
 

@@ -1,4 +1,4 @@
-package com.example.ndiem.tehameditions18;
+package com.example.ndiem.tehameditions18.roman;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -7,17 +7,22 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.example.ndiem.tehameditions18.class_livres_auteurs.AuteurList;
+import com.example.ndiem.tehameditions18.R;
+import com.example.ndiem.tehameditions18.class_livres_auteurs.RomanList;
+import com.example.ndiem.tehameditions18.class_livres_auteurs.SectionStatePagerAdapter;
+import com.example.ndiem.tehameditions18.theatre.TheatreActivity;
+import com.example.ndiem.tehameditions18.conte.ConteActivity;
+import com.example.ndiem.tehameditions18.essai.EssaiActivity;
+
 
 public class RomanActivity extends AppCompatActivity {
     private SectionStatePagerAdapter mSectionStatePagerAdapter = null;
     private ViewPager mViewPager = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +34,10 @@ public class RomanActivity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.container_view);
         setupViewPager(mViewPager);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs_roman);
         tabLayout.setupWithViewPager(mViewPager);
 
-        tabLayout.getTabAt(0).setText("Roman");
+        tabLayout.getTabAt(0).setText("Livres");
         tabLayout.getTabAt(1).setText("Auteurs");
         tabLayout.setTabTextColors(R.color.colorGray,R.color.colorPrimary);
 
@@ -63,14 +68,11 @@ public class RomanActivity extends AppCompatActivity {
                         Intent intentConte = new Intent(RomanActivity.this,ConteActivity.class);
                         startActivity(intentConte);
                         break;
-
                 }
 
                 return false;
             }
         });
-
-
 
     }
 

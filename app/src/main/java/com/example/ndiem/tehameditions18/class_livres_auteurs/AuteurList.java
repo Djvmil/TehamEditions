@@ -1,4 +1,4 @@
-package com.example.ndiem.tehameditions18;
+package com.example.ndiem.tehameditions18.class_livres_auteurs;
 
 
 import android.os.Bundle;
@@ -8,6 +8,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.ndiem.tehameditions18.R;
+import com.example.ndiem.tehameditions18.class_livres_auteurs.AuteurClass;
+import com.example.ndiem.tehameditions18.class_livres_auteurs.RecyclerViewAdapterAuteur;
 
 import java.util.ArrayList;
 import java.util.List;

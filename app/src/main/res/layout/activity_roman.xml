@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
-    tools:context=".RomanActivity">
+    tools:context=".roman.RomanActivity">
 
 
     <RelativeLayout
@@ -13,19 +13,45 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <!-- Top -->
         <RelativeLayout
-            android:id="@+id/rel_top"
+            android:id="@+id/rel_top1"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="39dp"
             android:layout_alignParentTop="true">
 
             <android.support.design.widget.AppBarLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Roman"
+                    android:textAlignment="center"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+            </android.support.design.widget.AppBarLayout>
+
+
+        </RelativeLayout>
+
+        <!-- Top -->
+        <RelativeLayout
+            android:id="@+id/rel_top"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:layout_below="@+id/rel_top1"
+            android:layout_marginTop="2dp">
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
                 <android.support.design.widget.TabLayout
-                    android:id="@+id/tabs"
+                    android:id="@+id/tabs_roman"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/white_gray_border_botom" />
@@ -39,17 +65,20 @@
         <RelativeLayout
             android:id="@+id/rel_section"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="437dp"
             android:layout_above="@id/rel_bottom"
-            android:layout_below="@+id/rel_top">
+            android:layout_below="@+id/rel_top"
+            android:layout_marginTop="0dp">
 
             <android.support.v4.view.ViewPager
                 android:id="@+id/container_view"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@drawable/white_gray_border_botom" />
 
         </RelativeLayout>
+
+
 
         <RelativeLayout
             android:id="@+id/rel_bottom"

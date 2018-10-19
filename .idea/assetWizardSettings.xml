@@ -44,9 +44,10 @@
                                   </option>
                                   <option name="values">
                                     <map>
+                                      <entry key="backgroundAssetType" value="COLOR" />
+                                      <entry key="backgroundColor" value="f4f4f4" />
                                       <entry key="backgroundImage" value="C:\Users\ndiem\Desktop\OpeNumeric\App Android\Teham\images\teham.png" />
                                       <entry key="foregroundImage" value="C:\Users\ndiem\Desktop\OpeNumeric\App Android\Teham\images\teham.png" />
-                                      <entry key="legacyIconShape" value="CIRCLE" />
                                     </map>
                                   </option>
                                 </PersistentState>

@@ -1,5 +1,6 @@
-package com.example.ndiem.tehameditions18;
+package com.example.ndiem.tehameditions18.class_livres_auteurs;
 
+import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -9,15 +10,20 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.ndiem.tehameditions18.R;
+import com.example.ndiem.tehameditions18.retrofit.responseapi.Book;
+import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class RecyclerViewAdapterRoman  extends RecyclerView.Adapter<RecyclerViewAdapterRoman.MyViewHolder> {
 
 
     private Context mContext;
-    private List<RomanClass> mData;
+    private ArrayList<Book> mData;
 
-    public RecyclerViewAdapterRoman(Context mContext, List<RomanClass> mData) {
+    public RecyclerViewAdapterRoman(Context mContext, ArrayList<Book> mData) {
         this.mContext = mContext;
         this.mData = mData;
     }
@@ -37,11 +43,26 @@ public class RecyclerViewAdapterRoman  extends RecyclerView.Adapter<RecyclerView
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
 
-        myViewHolder.title_book_id.setText(mData.get(i).getTitreRoman() );
-        myViewHolder.auteur_book_id.setText(mData.get(i).getNomAuteur() );
-        myViewHolder.editeur_book_id.setText(mData.get(i).getEditeur() );
-        myViewHolder.nbMention.setText(mData.get(i).getNbMention() );
-        myViewHolder.img_book_id.setImageResource(mData.get(i).getCouverture_roman());
+
+        myViewHolder.title_book_id.setText(mData.get(i).getTitre_livre());
+        myViewHolder.auteur_book_id.setText(mData.get(i).getDescription_livre());
+        myViewHolder.editeur_book_id.setText(mData.get(i).getEditeur_livre() );
+        myViewHolder.nbMention.setText(mData.get(i).getNb_mentions_livre());
+
+        Picasso.with(mContext).load(mData.get(i).getUrl_image_livre().toString()).into(myViewHolder.img_book_id);
+
+
+     //   Picasso . get () . charger ( url ) . redimensionner ( 50 , 50 ) . centerCrop () . into ( imageView )
+
+       // "http://waklytech.alwaysdata.net/storage/";
+
+
+/*
+        myViewHolder.title_book_id.setText(mData.get(i).getTitre_livre());
+        myViewHolder.auteur_book_id.setText(mData.get(i).getId_auteur_livre());
+        myViewHolder.editeur_book_id.setText(mData.get(i).getEditeur_livre() );
+        myViewHolder.nbMention.setText(mData.get(i).getNb_mentions_livre());
+        myViewHolder.img_book_id.setImageResource(R.drawable.livre3);*/
     }
 
     @Override
@@ -65,7 +86,6 @@ public class RecyclerViewAdapterRoman  extends RecyclerView.Adapter<RecyclerView
             auteur_book_id = (TextView) itemView.findViewById(R.id.auteur_book_id);
             editeur_book_id = (TextView) itemView.findViewById(R.id.editeur_book_id);
             nbMention = (TextView) itemView.findViewById(R.id.nb_book_id);
-
         }
     }
 }
